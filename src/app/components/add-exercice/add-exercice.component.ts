@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
-  selector: 'app-add-exercice',
-  templateUrl: './add-exercice.component.html',
-  styleUrls: ['./add-exercice.component.scss']
+    selector: 'app-add-exercice',
+    templateUrl: './add-exercice.component.html',
+    styleUrls: ['./add-exercice.component.scss'],
+    standalone: true,
+    imports: [HeaderComponent, NgFor]
 })
 export class AddExerciceComponent {
   public exercices : any = [

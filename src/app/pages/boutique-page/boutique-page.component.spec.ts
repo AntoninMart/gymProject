@@ -8,8 +8,8 @@ describe('BoutiquePageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BoutiquePageComponent]
-    });
+    imports: [BoutiquePageComponent]
+});
     fixture = TestBed.createComponent(BoutiquePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

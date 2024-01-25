@@ -8,8 +8,8 @@ describe('CreateSeanceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CreateSeanceComponent]
-    });
+    imports: [CreateSeanceComponent]
+});
     fixture = TestBed.createComponent(CreateSeanceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

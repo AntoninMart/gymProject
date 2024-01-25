@@ -8,8 +8,8 @@ describe('UnknowpageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UnknowpageComponent]
-    });
+    imports: [UnknowpageComponent]
+});
     fixture = TestBed.createComponent(UnknowpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
