@@ -1,0 +1,15 @@
+<section class="pt-[13vh] text-black grid grid-cols-4 gap-6 px-20">
+    <div *ngFor="let exercice of exercices">
+        <img src="" alt="">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="assets/images/Exercice_icones/{{groupeName}}/{{exercice.image}}" alt="{{exercice.image}}" class="bg-gym-red-200"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">{{exercice.nom}}</h2>
+              <p>{{exercice.description}}</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-outline btn-success">Ajouter l'exercice</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

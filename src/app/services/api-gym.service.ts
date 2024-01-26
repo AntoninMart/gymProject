@@ -26,4 +26,8 @@ export class ApiGymService {
     return this.http.get<any>(`${this.apiUrl}/Exercices/${id}`);
   }
 
+  GetExercicesByGroupe(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/Exercices/byGroupeMusculaire/${id}`)
+  }
+
 }

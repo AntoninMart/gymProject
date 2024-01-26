@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SeancePageComponent } from './pages/seance-page/seance-page.component';
 import { UnknowpageComponent } from './pages/unknowpage/unknowpage.component';
-import { AddExerciceComponent } from './components/add-exercice/add-exercice.component';
+import { ExercicesPageComponent } from './components/exercices-page/exercices-page.component';
+import { GroupeSelectorComponent } from './components/groupe-selector/groupe-selector.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: "", component: HomePageComponent },
   { path: "seance", component: SeancePageComponent },
-  { path: "addexercice", component: AddExerciceComponent },
+  { path: "groupeselector", component: GroupeSelectorComponent },
+  { path: "exercice/:id", component: ExercicesPageComponent },
   { path: "**", component: UnknowpageComponent }
 ];
 
