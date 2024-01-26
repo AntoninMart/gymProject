@@ -1,10 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiGymService {
+  apiUrl = 'https://localhost:7164/api';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getGroupe(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/GroupeMusculaires`);
+  }
+
+  GetGroupeById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/GroupeMusculaires/${id}`);
+  }
+
+  getExercices(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/Exercices`);
+  }
+
+  GetExercicesById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/Exercices/${id}`);
+  }
+
 }
