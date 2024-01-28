@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { ApiGymService } from 'src/app/services/api-gym.service';
 
 @Component({
     selector: 'app-home',
@@ -10,15 +11,25 @@ import { NgFor } from '@angular/common';
     imports: [NgFor, RouterLink]
 })
 export class HomeComponent {
-  constructor(){ }
-  public Seance : any = [
-    {
-      image : "assets/images/one.png",
-      titre : "Séance une",
-    },
-    {
-      image : "assets/images/two.png",
-      titre : "Séance deux",
-    }
-  ]
+  constructor(private apiGymService: ApiGymService){ }
+
+  public Seance : any = [];
+
+  // public Seance : any = [
+  //   {
+  //     image : "assets/images/one.png",
+  //     titre : "Séance une",
+  //   },
+  //   {
+  //     image : "assets/images/two.png",
+  //     titre : "Séance deux",
+  //   }
+  // ]
+
+  ngOnInit() {
+    this.apiGymService.getSeance().subscribe((data: any[]) => {
+      this.Seance = data;
+      console.log(data)
+    });
+  }
 }
