@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CreateSeanceComponent } from '../../components/create-seance/create-seance.component';
-import { HeaderComponent } from '../../components/header/header.component';
+import { HeaderComponent } from '../../../core/header/header.component';
 
 @Component({
     selector: 'app-seance-page',

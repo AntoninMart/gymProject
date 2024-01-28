@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
-import { ApiGymService } from 'src/app/services/api-gym.service';
+import { ApiGymService } from 'src/app/core/services/api-gym.service';
 
 @Component({
     selector: 'app-home',

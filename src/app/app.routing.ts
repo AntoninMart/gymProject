@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SeancePageComponent } from './pages/seance-page/seance-page.component';
-import { UnknowpageComponent } from './pages/unknowpage/unknowpage.component';
-import { ExercicesPageComponent } from './components/exercices-page/exercices-page.component';
-import { GroupeSelectorComponent } from './components/groupe-selector/groupe-selector.component';
+import { HomePageComponent } from './accueil/components/pages/home-page/home-page.component';
+import { SeancePageComponent } from './seances/pages/seance-page/seance-page.component';
+import { UnknowpageComponent } from './shared/unknowpage/unknowpage.component';
+import { ExercicesPageComponent } from './exercices/pages/exercices-page/exercices-page.component';
+import { GroupeSelectorComponent } from './exercices/pages/groupe-selector/groupe-selector.component';
 
 export const routes: Routes = [
   { path: "", component: HomePageComponent },
