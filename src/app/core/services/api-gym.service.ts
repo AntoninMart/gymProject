@@ -33,8 +33,10 @@ export class ApiGymService {
   getSeance(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/Seances`);
   }
-  getSeanceById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/Seances/${id}`);
+
+  addSeance(post: any): Observable<any> {
+    console.log("allo");
+    return this.http.post<any>(`${this.apiUrl}/Seances`, post);
   }
 
 }
