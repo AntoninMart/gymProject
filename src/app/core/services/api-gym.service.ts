@@ -35,8 +35,11 @@ export class ApiGymService {
   }
 
   addSeance(post: any): Observable<any> {
-    console.log("allo");
     return this.http.post<any>(`${this.apiUrl}/Seances`, post);
+  }
+
+  deleteSeance(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/Seances/${id}`);
   }
 
 }

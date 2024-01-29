@@ -1,0 +1,18 @@
+<section class="flex flex-col items-center pt-[10vh] text-white gap-6 justify-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center px-8 lg:px-28">
+        <div *ngFor="let seance of Seance">
+            <div class="bg-gym-black-50 p-6 rounded-xl cursor-pointer">
+                <h2 class="text-2xl">
+                    {{ seance.nom }}
+                </h2>
+                <img src="assets/images/one.png" alt="" class="h-1/2">
+                <div class="grid grid-cols-3 gap-2 mt-2">
+                    <button (click)="deleteSeance(seance.id)" class="btn btn-outline btn-error">Supprimer</button>
+                    <button class="btn btn-outline btn-warning">Modifier</button>
+                    <button class="btn btn-outline btn-success">Démarrer</button>
+                </div>
+            </div>
+        </div>
+        <button routerLink="/seance" class="btn btn-outline btn-error w-full h-full">+ Ajouter une séance</button>
+    </div>
+</section>

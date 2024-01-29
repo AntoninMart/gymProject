@@ -5,12 +5,14 @@ import { SeancePageComponent } from './seances/pages/seance-page/seance-page.com
 import { UnknowpageComponent } from './shared/unknowpage/unknowpage.component';
 import { ExercicesPageComponent } from './exercices/pages/exercices-page/exercices-page.component';
 import { GroupeSelectorComponent } from './exercices/pages/groupe-selector/groupe-selector.component';
+import { ListSeancePageComponent } from './seances/pages/list-seance-page/list-seance-page.component';
 
 export const routes: Routes = [
   { path: "", component: HomePageComponent },
   { path: "seance", component: SeancePageComponent },
   { path: "groupeselector", component: GroupeSelectorComponent },
   { path: "exercice/:id", component: ExercicesPageComponent },
+  { path: "list-seance", component: ListSeancePageComponent},
   { path: "**", component: UnknowpageComponent }
 ];
 

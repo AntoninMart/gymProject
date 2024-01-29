@@ -27,7 +27,6 @@ export class ExercicesPageComponent {
   ngOnInit() {
     this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((data: any[]) => {
       this.exercices = data;
-      console.log(data)
     });
     this.apiGymService.GetGroupeById(this.idGroupe).subscribe((data: any[]) => {
       this.groupe = data;

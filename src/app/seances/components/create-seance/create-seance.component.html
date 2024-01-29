@@ -1,6 +1,6 @@
 <section class="pt-[10vh] flex justify-center">
     <div class="max-w-4xl w-full">
         <textarea [(ngModel)]="name" (input)="onTextareaChange()" class="textarea resize-none w-full" placeholder="Nom de la séance"></textarea>
-        <button routerLink="/" (click)="createSeance()" [ngClass]="isTextareaFilled ? 'btn-success' : ' btn-success btn-disabled'" class="btn btn-outline w-full">Créer la séance</button>
+        <button routerLink="/list-seance" (click)="createSeance()" [ngClass]="isTextareaFilled ? 'btn-success' : ' btn-success btn-disabled'" class="btn btn-outline w-full">Créer la séance</button>
     </div>
 </section>

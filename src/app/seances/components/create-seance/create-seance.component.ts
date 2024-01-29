@@ -14,14 +14,12 @@ import { ApiGymService } from 'src/app/core/services/api-gym.service';
 export class CreateSeanceComponent {
     public name!: string;
     public isTextareaFilled: boolean = false;
-
+    
     constructor(private apiGymService: ApiGymService) { }
 
     public createSeance(): void {
-        console.log(this.name);
         const data = { nom: this.name, id_Utilisateurs: 1 };
         this.apiGymService.addSeance(data).subscribe((data: any) => {
-            console.log(data)
           });;
     }
 
