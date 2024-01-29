@@ -1,13 +1,23 @@
 <section class="flex flex-col xl:flex-row pt-[10vh] gap-6 px-6 min-h-[90vh]">
     <div routerLink="/list-seance" class="w-full xl:w-1/2 bg-gym-red-100 p-12 rounded-lg cursor-pointer">
-        <h4 class="text-xl">SEANCES</h4>
+        <div class="flex flex-row gap-1 items-center">
+            <h4 class="text-xl">SEANCES</h4>
+            <span class="material-symbols-outlined text-4xl">
+                exercise
+            </span>
+        </div>
         <h2 class="text-8xl text-white">Accéder à vos séances</h2>
         <img src="assets/images/haltere.png" alt="" class="max-w-md">
     </div>
     <div class="w-full xl:w-1/2 rounded-lg flex flex-col gap-4">
         <div class="bg-blue-500 p-12 rounded-lg h-1/2 flex flex-col cursor-pointer">
             <div class="h-1/2">
-                <h3>STATISTIQUES</h3>
+                <div class="flex flex-row gap-1 items-center">
+                    <h3>STATISTIQUES</h3>
+                    <span class="material-symbols-outlined text-4xl">
+                        query_stats
+                    </span>
+                </div>
             </div>
             <div class="h-1/2 flex items-end text-6xl sm:text-8xl text-white">
                 <h3>Accéder à vos statistiques</h3>
@@ -16,7 +26,12 @@
         <div class="flex flex-col sm:flex-row gap-4 h-1/2">
             <div routerLink="/groupeselector" class="bg-purple-500 w-full sm:w-1/2 p-12 rounded-lg flex flex-col cursor-pointer">
                 <div class="h-1/2">
-                    <h3>EXERCICES</h3>
+                    <div class="flex flex-row items-center gap-1">
+                        <h3>EXERCICES</h3>
+                        <span class="material-symbols-outlined text-4xl">
+                            sports_gymnastics
+                        </span>
+                    </div>
                 </div>
                 <div class="h-1/2 flex items-end">
                     <h2 class="text-6xl text-white">Voir la liste des exercices</h2>
@@ -24,7 +39,12 @@
             </div>
             <div class="bg-emerald-500 w-full sm:w-1/2 p-12 rounded-lg flex flex-col cursor-pointer">
                 <div class="h-1/2">
-                    <h3>A PROPOS</h3>
+                    <div class="flex flex-row items-center gap-1">
+                        <h3>A PROPOS</h3>
+                        <span class="material-symbols-outlined text-4xl">
+                            person_search
+                        </span>
+                    </div>
                 </div>
                 <div class="h-1/2 flex items-end">
                     <h2 class="text-6xl text-white">A propos de nous</h2>
