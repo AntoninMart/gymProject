@@ -42,4 +42,7 @@ export class ApiGymService {
     return this.http.delete<any>(`${this.apiUrl}/Seances/${id}`);
   }
 
+  GetExercicesBySeanceId(id: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/ExercicesSeances/GetExercicesBySeanceId/${id}`);
+  }
 }

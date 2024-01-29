@@ -22,6 +22,7 @@ export class ExercicesPageComponent {
   @Input()
   set id(Id: string) {
     this.idGroupe = +Id;
+    console.log(this.idGroupe)
   }
   
   ngOnInit() {
