@@ -11,20 +11,20 @@ import { ApiGymService } from 'src/app/core/services/api-gym.service';
   styleUrl: './exercices-page.component.scss'
 })
 export class ExercicesPageComponent {
-  
+
   exercices: any = [];
   groupe: any = [];
-  private idGroupe!:number;
-  public groupeName!:string;
+  private idGroupe!: number;
+  public groupeName!: string;
 
-  constructor (private apiGymService: ApiGymService) {}
+  constructor(private apiGymService: ApiGymService) { }
 
   @Input()
   set id(Id: string) {
     this.idGroupe = +Id;
     console.log(this.idGroupe)
   }
-  
+
   ngOnInit() {
     this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((data: any[]) => {
       this.exercices = data;

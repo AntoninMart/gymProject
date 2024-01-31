@@ -7,9 +7,9 @@
                 </h2>
                 <img src="assets/images/one.png" alt="" class="h-1/2">
                 <div class="grid grid-cols-3 gap-2 mt-2">
-                    <button (click)="deleteSeance(seance.id)" class="btn btn-outline btn-error">Supprimer</button>
-                    <button routerLink="/update-seance/{{seance.id}}" class="btn btn-outline btn-warning">Modifier</button>
                     <button class="btn btn-outline btn-success">Démarrer</button>
+                    <button routerLink="/update-seance/{{seance.id}}" class="btn btn-outline btn-warning">Modifier</button>
+                    <button (click)="deleteSeance(seance.id)" class="btn btn-outline btn-error">Supprimer</button>
                 </div>
             </div>
         </div>
