@@ -6,43 +6,43 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiGymService {
-  apiUrl = 'https://localhost:7164/api';
+  apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
   getGroupe(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/GroupeMusculaires`);
+    return this.http.get<any[]>(`${this.apiUrl}/groupes`);
   }
 
   GetGroupeById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/GroupeMusculaires/${id}`);
+    return this.http.get<any>(`${this.apiUrl}/groupes/${id}`);
   }
 
   getExercices(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/Exercices`);
+    return this.http.get<any[]>(`${this.apiUrl}/exercices`);
   }
 
   GetExercicesById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/Exercices/${id}`);
+    return this.http.get<any>(`${this.apiUrl}/exercices/${id}`);
   }
 
   GetExercicesByGroupe(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/Exercices/byGroupeMusculaire/${id}`)
+    return this.http.get<any>(`${this.apiUrl}/exercices/groupes/${id}`)
   }
 
   getSeance(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/Seances`);
+    return this.http.get<any[]>(`${this.apiUrl}/seances`);
   }
 
   addSeance(post: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/Seances`, post);
+    return this.http.post<any>(`${this.apiUrl}/seances`, post);
   }
 
   deleteSeance(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/Seances/${id}`);
+    return this.http.delete<any>(`${this.apiUrl}/seances/${id}`);
   }
 
   GetExercicesBySeanceId(id: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/ExercicesSeances/GetExercicesBySeanceId/${id}`);
+    return this.http.get<any[]>(`${this.apiUrl}/seances/${id}/exercices`);
   }
 }

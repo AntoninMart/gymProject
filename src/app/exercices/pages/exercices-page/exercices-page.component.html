@@ -1,8 +1,8 @@
-<section class="pt-[13vh] text-black grid grid-cols-3 xl:grid-cols-4 gap-6 px-20">
+<section class="pt-[13vh] text-white grid grid-cols-3 xl:grid-cols-4 gap-6 px-20">
     <div *ngFor="let exercice of exercices">
         <img src="" alt="">
         <div class="card card-compact w-80 h-full bg-base-100 shadow-xl">
-            <figure><img src="assets/images/Exercice_icones/{{groupeName}}/{{exercice.image}}" alt="{{exercice.image}}" class="bg-gym-red-200"/></figure>
+            <figure><img src="assets/images/Exercice_icones/{{exercice.groupeMusculaire.nom}}/{{exercice.image}}" alt="{{exercice.image}}" class="bg-gym-red-200"/></figure>
             <div class="card-body">
               <h2 class="card-title">{{exercice.nom}}</h2>
               <p>{{exercice.description}}</p>

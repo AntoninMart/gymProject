@@ -20,7 +20,8 @@ export class CreateSeanceComponent {
     public createSeance(): void {
         const data = { nom: this.name, id_Utilisateurs: 1 };
         this.apiGymService.addSeance(data).subscribe((data: any) => {
-          });;
+            console.log(data);
+        });;
     }
 
     public onTextareaChange(): void {

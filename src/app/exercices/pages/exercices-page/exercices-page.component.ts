@@ -13,25 +13,33 @@ import { ApiGymService } from 'src/app/core/services/api-gym.service';
 export class ExercicesPageComponent {
 
   exercices: any = [];
-  groupe: any = [];
   private idGroupe!: number;
-  public groupeName!: string;
 
   constructor(private apiGymService: ApiGymService) { }
 
   @Input()
   set id(Id: string) {
-    this.idGroupe = +Id;
+    this.idGroupe = Number(Id);
     console.log(this.idGroupe)
   }
 
   ngOnInit() {
-    this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((data: any[]) => {
+    console.log("on requete les exercices by groupe :")
+    this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((
+      data: 
+      { 
+        description: string, 
+        groupeMusculaire: {
+          id: number,
+          nom: string,
+        },
+        groupeMusculaireId: number,
+        id: number,
+        image: string,
+        nom: string,
+      }[]
+      ) => {
       this.exercices = data;
-    });
-    this.apiGymService.GetGroupeById(this.idGroupe).subscribe((data: any[]) => {
-      this.groupe = data;
-      this.groupeName = this.groupe.nom;
     });
   }
 }
