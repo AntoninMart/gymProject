@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ApiGymService } from 'src/app/core/services/api-gym.service';
+import { IExercices } from 'src/app/core/interface/exercices.interface';
 
 @Component({
   selector: 'app-exercices-page',
@@ -25,20 +26,7 @@ export class ExercicesPageComponent {
 
   ngOnInit() {
     console.log("on requete les exercices by groupe :")
-    this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((
-      data: 
-      { 
-        description: string, 
-        groupeMusculaire: {
-          id: number,
-          nom: string,
-        },
-        groupeMusculaireId: number,
-        id: number,
-        image: string,
-        nom: string,
-      }[]
-      ) => {
+    this.apiGymService.GetExercicesByGroupe(this.idGroupe).subscribe((data: IExercices[]) => {
       this.exercices = data;
     });
   }

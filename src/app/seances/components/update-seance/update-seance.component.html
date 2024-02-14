@@ -1,8 +1,8 @@
-<section class="pt-[10vh] grid grid-cols-4 gap-4 mx-4 text-black">
-    <div *ngFor="let exercice of Exercices" class="card card-compact bg-base-100 shadow-xl">
-        <!-- <figure><img src="assets/images/{{groupName}}/{{exercice.image}}" alt="{{exercice.image}}" /></figure> -->
+<section class="pt-[10vh] grid grid-cols-4 gap-4 mx-4 text-white">
+    <div *ngFor="let exercice of exercices" class="card card-compact bg-base-100 shadow-xl">
+        <figure><img src="assets/images/exercices_images/{{exercice.exercice.image}}" alt="{{exercice.exercice.image}}" /></figure>
         <div class="card-body">
-            <h2 class="card-title">{{exercice.nom}}</h2>
+            <h2 class="card-title">{{exercice.exercice.nom}}</h2>
             <div class="card-actions justify-end">
                 <button class="btn btn-error">Supprimer</button>
             </div>
